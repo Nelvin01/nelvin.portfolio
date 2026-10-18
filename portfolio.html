@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio — Nelvin Amonsot</title>
-<meta name="description" content="Case studies: Amazon Flat File automation, Amazon SEO overhaul, and remote team leadership by Nelvin Amonsot.">
+<meta name="description" content="Case studies by Nelvin Amonsot: Amazon Flat File automation, Amazon SEO overhaul, remote team leadership, an AI document-reading app, live production dashboards, and web development.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -36,7 +36,7 @@
 <section class="page-hero">
   <div class="container">
     <h1>Portfolio &amp; Case Studies</h1>
-    <p>Real projects from my time managing operations and Amazon growth at RSH Décor (2024–2026).</p>
+    <p>Real projects from managing operations and Amazon growth at RSH Décor (2024–2026), plus the AI-powered apps, dashboards, and websites I've built with Claude.</p>
   </div>
 </section>
 
@@ -121,6 +121,100 @@
           <span class="tag">Team Dashboards</span>
           <span class="tag">Shopify</span>
           <span class="tag">Notion / Slack</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY 4 -->
+<section class="tight" style="background: var(--bg-alt);">
+  <div class="container split reverse reveal">
+    <div class="reveal" style="order:2;">
+      <span class="case-tag">AI Automation</span>
+      <h2>Receiving Digitizer with AI Auto-Fill</h2>
+      <p>Paperwork that came with received shipments (packing slips, BOLs, invoices, damage reports) was kept on paper, which made it slow to find later and easy to lose.</p>
+      <p><strong>What I built:</strong> a phone-first web app. A receiver scans a QR code at the receiving door, photographs the paperwork, checks it's readable, and submits. Scans go to private cloud storage, the details go to a database, and a searchable archive lets the team find any document in seconds. Sign-in is role-based through Auth0.</p>
+      <p><strong>The AI layer:</strong> in V2, Claude reads the captured pages and fills in the form fields automatically, flagging anything it couldn't read clearly. The receiver only types what's missing. If the AI is slow or unavailable, the app falls back to manual entry so receiving never stops.</p>
+      <p><strong>How I shipped it safely:</strong> V2 runs as a separate preview deploy against clearly named test tables and storage, so new features get tested without touching live data.</p>
+      <div class="case-result reveal" style="border:1px solid var(--border); border-radius: var(--radius-md); padding: 20px; background:#fff;">
+        <span class="num">Paper → searchable</span>
+        Every received document captured, stored, and findable from a phone
+      </div>
+    </div>
+    <div class="reveal" style="order:1;">
+      <div class="card">
+        <div class="card-icon">📄</div>
+        <h3>Tools Used</h3>
+        <div class="tag-list">
+          <span class="tag">Claude Code</span>
+          <span class="tag">Claude API (vision)</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">Netlify Functions</span>
+          <span class="tag">Auth0</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">GitHub</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY 5 -->
+<section>
+  <div class="container split reveal">
+    <div>
+      <span class="case-tag">Dashboards</span>
+      <h2>Live Production Tracking Dashboards</h2>
+      <p>Production status lived in Airtable reports that were hard to read on the floor, and some were too big for Airtable to even display.</p>
+      <p><strong>What I built:</strong> a suite of 69 live web dashboards covering every stage of production: cutting, sewing, foam, blowing, packing, inventory pulls, shipments between locations, custom orders, overdue and potentially stuck orders, and scans per operator.</p>
+      <p><strong>How:</strong> each dashboard reads directly from Supabase and reproduces the logic of the original Airtable views (filters, date windows, week boundaries), checked against the source so managers can trust the numbers.</p>
+      <div class="case-result reveal" style="border:1px solid var(--border); border-radius: var(--radius-md); padding: 20px; background:#fff;">
+        <span class="num">69 dashboards</span>
+        Real-time visibility across 18 production areas
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>Tools Used</h3>
+        <div class="tag-list">
+          <span class="tag">Claude Code</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">Airtable</span>
+          <span class="tag">HTML / CSS / JavaScript</span>
+          <span class="tag">KPI Dashboards</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY 6 -->
+<section class="tight" style="background: var(--bg-alt);">
+  <div class="container split reverse reveal">
+    <div class="reveal" style="order:2;">
+      <span class="case-tag">Web Development</span>
+      <h2>Gabay-Tesis Digital Impact Portfolio</h2>
+      <p>The Sangguniang Kabataan of Barangay New Pandan (Matalam, Cotabato) needed a professional way to present their youth-led research mentorship program for the 22nd TAYO Awards.</p>
+      <p><strong>What I built:</strong> a full impact portfolio site showing program stats, competency gains, testimonials, an evidence library, and partners, organized around the TAYO judging criteria.</p>
+      <p><strong>Built to hand off:</strong> every fact and figure lives in simple content files, so non-technical SK staff can update the site without touching the design.</p>
+      <div class="case-result reveal" style="border:1px solid var(--border); border-radius: var(--radius-md); padding: 20px; background:#fff;">
+        <span class="num">162 beneficiaries</span>
+        Program impact presented in one live site &middot; <a href="https://gabay-tesis.vercel.app/" target="_blank" rel="noopener">View live site →</a>
+      </div>
+    </div>
+    <div class="reveal" style="order:1;">
+      <div class="card">
+        <div class="card-icon">🌐</div>
+        <h3>Tools Used</h3>
+        <div class="tag-list">
+          <span class="tag">Next.js</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Tailwind CSS</span>
+          <span class="tag">Vercel</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">Claude Code</span>
         </div>
       </div>
     </div>
