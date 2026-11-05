@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio — Nelvin Amonsot</title>
-<meta name="description" content="Case studies by Nelvin Amonsot: Amazon Flat File automation, Amazon SEO overhaul, remote team leadership, an AI document-reading app, live production dashboards, and web development.">
+<meta name="description" content="Systems built by Nelvin Amonsot: SK Records and Finance System, AI receiving digitizer, Amazon Flat File app, 69 live dashboards, and more.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -36,33 +36,39 @@
 <section class="page-hero">
   <div class="container">
     <h1>Portfolio &amp; Case Studies</h1>
-    <p>Real projects from managing operations and Amazon growth at RSH Décor (2024–2026), plus the AI-powered apps, dashboards, and websites I've built with Claude.</p>
+    <p>Apps and systems I've designed, built, and shipped, plus the Amazon listing and operations results behind them.</p>
   </div>
 </section>
 
 <!-- CASE STUDY 1 -->
 <section>
   <div class="container split reveal">
-    <div>
-      <span class="case-tag">Automation</span>
-      <h2>Amazon Flat File Automation App</h2>
-      <p>Creating and updating Amazon Flat Files for new listings and product variations was a fully manual, repetitive process — prone to errors and slow to turn around at scale.</p>
-      <p><strong>What I built:</strong> an end-to-end application using Claude Code that automates Flat File creation — generating accurate, ready-to-upload files for new listings and variations without manual rebuilding each time.</p>
-      <p><strong>Why it mattered:</strong> I was the only person on the team who built something that removes future work rather than just completing tasks in front of me — a system that keeps paying off every week instead of a one-time fix.</p>
+    <div class="reveal">
+      <span class="case-tag">Records &amp; Finance System</span>
+      <h2>SK Records and Finance System</h2>
+      <p>The Sangguniang Kabataan (youth council) of New Pandan, Matalam, Cotabato produces a steady stream of official documents: notices, agendas, minutes, resolutions, committee reports, activity designs, MOAs, and financial and accomplishment reports. Each one was typed by hand into Word, with the same names, dates, and numbers retyped across several files and a constant risk of mismatches.</p>
+      <p><strong>What I built:</strong> a single-file web app that runs offline in Chrome or Edge with nothing to install. Officers enter a session once, and the app writes the Notice of Meeting, Order of Business, Committee Reports, Minutes, and every Resolution from that same data, as Word files that match the council's official letterhead, fonts, numbering, and line numbers exactly. It covers <strong>11 document types</strong> in all, including Activity Designs, Memoranda of Agreement, Accomplishment, Documentation (photo), and Post-Activity Evaluation reports.</p>
+      <p><strong>Finance and records:</strong> budget tables calculate line totals, totals, and remaining balances automatically. Monthly and quarterly financial report resolutions are written from just the date and the amount, with the amount spelled out in words, and ABYIP budget tables are supported. Evaluation reports compute weighted means and their verbal descriptions.</p>
+      <p><strong>Built-in quality checks:</strong> before download, the app flags missing dates, duplicate numbers, incomplete years, and sessions without a quorum. A <strong>✨ Write with ChatGPT</strong> button drafts formal WHEREAS and RESOLVED clauses using only the facts provided, with an API credit tracker and a copy-paste fallback for users without an API key. It also writes Facebook captions in the council's own style.</p>
+      <p><strong>How it's engineered:</strong> a Python tool converts the council's real Word documents into fillable templates, and a JavaScript engine fills them. The whole app builds into one HTML file, and eight Playwright end-to-end test suites click through it in a real browser to keep each release working. Backups move all data, including photos, between computers.</p>
       <div class="case-result reveal" style="border:1px solid var(--border); border-radius: var(--radius-md); padding: 20px; background:#fff;">
-        <span class="num">1 month → 1 week</span>
-        Turnaround time for Flat File-based listing creation (~75% faster)
+        <span class="num">11 document types</span>
+        Generated from one set of session data, matching the official formats exactly
       </div>
     </div>
     <div class="reveal">
       <div class="card">
-        <div class="card-icon">⚙️</div>
+        <div class="card-icon">🏛️</div>
         <h3>Tools Used</h3>
         <div class="tag-list">
           <span class="tag">Claude Code</span>
-          <span class="tag">Amazon Flat Files</span>
-          <span class="tag">Excel Automation</span>
-          <span class="tag">Seller Central</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Python</span>
+          <span class="tag">Word (.docx) templates</span>
+          <span class="tag">OpenAI API</span>
+          <span class="tag">IndexedDB / offline storage</span>
+          <span class="tag">Playwright</span>
+          <span class="tag">GitHub</span>
         </div>
       </div>
     </div>
@@ -73,65 +79,7 @@
 <section class="tight" style="background: var(--bg-alt);">
   <div class="container split reverse reveal">
     <div class="reveal" style="order:2;">
-      <span class="case-tag">Amazon SEO</span>
-      <h2>Amazon Listing SEO Overhaul</h2>
-      <p>Owned SEO and listing optimization across a catalog of 25,000+ active ASINs for RSH Décor — keyword research, competitor analysis, listing audits, and full-listing content optimization.</p>
-      <p><strong>What I did:</strong> used Helium 10 for keyword research and competitor analysis, optimized titles, bullet points, descriptions, and backend search terms, and continuously monitored Search Query Performance (SQP) to catch new keyword opportunities.</p>
-      <p><strong>Result:</strong> raised the account's SEO/listing quality score from 2.8 to 8.7 by the time I left the role — a direct reflection of stronger search visibility and listing quality across the catalog.</p>
-      <div class="case-result reveal" style="border:1px solid var(--border); border-radius: var(--radius-md); padding: 20px; background:#fff;">
-        <span class="num">2.8 → 8.7</span>
-        SEO / listing quality score improvement
-      </div>
-    </div>
-    <div class="reveal" style="order:1;">
-      <div class="card">
-        <div class="card-icon">📈</div>
-        <h3>Tools Used</h3>
-        <div class="tag-list">
-          <span class="tag">Helium 10</span>
-          <span class="tag">Seller Central</span>
-          <span class="tag">A+ Content</span>
-          <span class="tag">SQP Analysis</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CASE STUDY 3 -->
-<section>
-  <div class="container split reveal">
-    <div>
-      <span class="case-tag">Operations</span>
-      <h2>Remote Team Leadership &amp; SOP Systems</h2>
-      <p>As the operation scaled, so did the team — I directly managed and trained a cross-functional remote team of 11 people across listing, flat file creation, image generation, and Shopify workflows.</p>
-      <p><strong>What I built:</strong> documented Standard Operating Procedures for listing management, flat file workflows, and quality control, and maintained live dashboards and trackers for real-time visibility into workload, progress, and team KPIs.</p>
-      <p><strong>Result:</strong> in the company's internal Impact-Weighted Performance Report, I consistently ranked #2 company-wide — behind only Anthony, the business owner — effectively the top-ranked employee on the team, with a near-perfect 99/100 discipline score.</p>
-      <div class="case-result reveal" style="border:1px solid var(--border); border-radius: var(--radius-md); padding: 20px; background:#fff;">
-        <span class="num">11 people</span>
-        Led across listing, flat file &amp; Shopify workflows
-      </div>
-    </div>
-    <div class="reveal">
-      <div class="card">
-        <div class="card-icon">🧭</div>
-        <h3>Tools Used</h3>
-        <div class="tag-list">
-          <span class="tag">SOP Documentation</span>
-          <span class="tag">Team Dashboards</span>
-          <span class="tag">Shopify</span>
-          <span class="tag">Notion / Slack</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CASE STUDY 4 -->
-<section class="tight" style="background: var(--bg-alt);">
-  <div class="container split reverse reveal">
-    <div class="reveal" style="order:2;">
-      <span class="case-tag">AI Automation</span>
+      <span class="case-tag">AI App</span>
       <h2>Receiving Digitizer with AI Auto-Fill</h2>
       <p>Paperwork that came with received shipments (packing slips, BOLs, invoices, damage reports) was kept on paper, which made it slow to find later and easy to lose.</p>
       <p><strong>What I built:</strong> a phone-first web app. A receiver scans a QR code at the receiving door, photographs the paperwork, checks it's readable, and submits. Scans go to private cloud storage, the details go to a database, and a searchable archive lets the team find any document in seconds. Sign-in is role-based through Auth0.</p>
@@ -155,15 +103,45 @@
           <span class="tag">JavaScript</span>
           <span class="tag">GitHub</span>
         </div>
+        <a href="https://v2--rsh-recieving-digitization.netlify.app/" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="margin-top:18px;">Open the live app →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CASE STUDY 5 -->
+<!-- CASE STUDY 3 -->
 <section>
   <div class="container split reveal">
-    <div>
+    <div class="reveal">
+      <span class="case-tag">Automation</span>
+      <h2>Amazon Flat File Automation App</h2>
+      <p>Creating and updating Amazon Flat Files for new listings and product variations was a fully manual, repetitive process, prone to errors and slow to turn around at scale.</p>
+      <p><strong>What I built:</strong> an end-to-end application, built with Claude Code, that automates Flat File creation. It generates accurate, ready-to-upload files for new listings and variations without rebuilding them by hand each time.</p>
+      <p><strong>Why it mattered:</strong> the company's internal performance report named me the only person on the team who built something that removes future work, not just completes tasks. It's a system that keeps paying off every week instead of a one-time fix.</p>
+      <div class="case-result reveal" style="border:1px solid var(--border); border-radius: var(--radius-md); padding: 20px; background:#fff;">
+        <span class="num">1 month → 1 week</span>
+        Turnaround time for Flat File-based listing creation (~75% faster)
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="card">
+        <div class="card-icon">⚙️</div>
+        <h3>Tools Used</h3>
+        <div class="tag-list">
+          <span class="tag">Claude Code</span>
+          <span class="tag">Amazon Flat Files</span>
+          <span class="tag">Excel Automation</span>
+          <span class="tag">Seller Central</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY 4 -->
+<section class="tight" style="background: var(--bg-alt);">
+  <div class="container split reverse reveal">
+    <div class="reveal" style="order:2;">
       <span class="case-tag">Dashboards</span>
       <h2>Live Production Tracking Dashboards</h2>
       <p>Production status lived in Airtable reports that were hard to read on the floor, and some were too big for Airtable to even display.</p>
@@ -174,7 +152,7 @@
         Real-time visibility across 18 production areas
       </div>
     </div>
-    <div class="reveal">
+    <div class="reveal" style="order:1;">
       <div class="card">
         <div class="card-icon">📊</div>
         <h3>Tools Used</h3>
@@ -190,10 +168,10 @@
   </div>
 </section>
 
-<!-- CASE STUDY 6 -->
-<section class="tight" style="background: var(--bg-alt);">
-  <div class="container split reverse reveal">
-    <div class="reveal" style="order:2;">
+<!-- CASE STUDY 5 -->
+<section>
+  <div class="container split reveal">
+    <div class="reveal">
       <span class="case-tag">Web Development</span>
       <h2>Gabay-Tesis Digital Impact Portfolio</h2>
       <p>The Sangguniang Kabataan of Barangay New Pandan (Matalam, Cotabato) needed a professional way to present their youth-led research mentorship program for the 22nd TAYO Awards.</p>
@@ -201,10 +179,10 @@
       <p><strong>Built to hand off:</strong> every fact and figure lives in simple content files, so non-technical SK staff can update the site without touching the design.</p>
       <div class="case-result reveal" style="border:1px solid var(--border); border-radius: var(--radius-md); padding: 20px; background:#fff;">
         <span class="num">162 beneficiaries</span>
-        Program impact presented in one live site &middot; <a href="https://gabay-tesis.vercel.app/" target="_blank" rel="noopener">View live site →</a>
+        Program impact presented in one live site
       </div>
     </div>
-    <div class="reveal" style="order:1;">
+    <div class="reveal">
       <div class="card">
         <div class="card-icon">🌐</div>
         <h3>Tools Used</h3>
@@ -215,6 +193,66 @@
           <span class="tag">Vercel</span>
           <span class="tag">GitHub</span>
           <span class="tag">Claude Code</span>
+        </div>
+        <a href="https://gabay-tesis.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="margin-top:18px;">View the live site →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY 6 -->
+<section class="tight" style="background: var(--bg-alt);">
+  <div class="container split reverse reveal">
+    <div class="reveal" style="order:2;">
+      <span class="case-tag">Amazon Product Listing &amp; SEO</span>
+      <h2>Amazon Listing SEO Overhaul</h2>
+      <p>Owned SEO and listing optimization across a catalog of 25,000+ active ASINs for RSH Décor: keyword research, competitor analysis, listing audits, and full-listing content optimization.</p>
+      <p><strong>What I did:</strong> used Helium 10 for keyword research and competitor analysis, optimized titles, bullet points, descriptions, and backend search terms, managed Flat Files and parent-child variations, and monitored Search Query Performance (SQP) to catch new keyword opportunities.</p>
+      <p><strong>Result:</strong> raised the account's SEO/listing quality score from 2.8 to 8.7 by the time I left the role, reflecting stronger search visibility and listing quality across the catalog.</p>
+      <div class="case-result reveal" style="border:1px solid var(--border); border-radius: var(--radius-md); padding: 20px; background:#fff;">
+        <span class="num">2.8 → 8.7</span>
+        SEO / listing quality score improvement
+      </div>
+    </div>
+    <div class="reveal" style="order:1;">
+      <div class="card">
+        <div class="card-icon">📈</div>
+        <h3>Tools Used</h3>
+        <div class="tag-list">
+          <span class="tag">Helium 10</span>
+          <span class="tag">Seller Central</span>
+          <span class="tag">Flat Files</span>
+          <span class="tag">A+ Content</span>
+          <span class="tag">SQP Analysis</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY 7 -->
+<section>
+  <div class="container split reveal">
+    <div class="reveal">
+      <span class="case-tag">Operations Management</span>
+      <h2>Remote Team Leadership &amp; SOP Systems</h2>
+      <p>As the operation scaled, so did the team. I directly managed and trained a cross-functional remote team of 11 people across listing, flat file creation, image generation, and Shopify workflows.</p>
+      <p><strong>What I built:</strong> documented Standard Operating Procedures for listing management, flat file workflows, and quality control, and maintained live dashboards and trackers for real-time visibility into workload, progress, and team KPIs.</p>
+      <p><strong>Result:</strong> in the company's internal Impact-Weighted Performance Report, I consistently ranked #2 company-wide, behind only Anthony, the business owner. That made me effectively the top-ranked employee on the team, with a near-perfect 99/100 discipline score.</p>
+      <div class="case-result reveal" style="border:1px solid var(--border); border-radius: var(--radius-md); padding: 20px; background:#fff;">
+        <span class="num">11 people</span>
+        Led across listing, flat file &amp; Shopify workflows
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="card">
+        <div class="card-icon">🧭</div>
+        <h3>Tools Used</h3>
+        <div class="tag-list">
+          <span class="tag">SOP Documentation</span>
+          <span class="tag">Team Dashboards</span>
+          <span class="tag">Shopify</span>
+          <span class="tag">Notion / Slack</span>
         </div>
       </div>
     </div>
@@ -244,7 +282,7 @@
   <div class="container">
     <div class="cta-banner reveal">
       <h2>Want results like these on your team?</h2>
-      <p>Let's talk about how I can help with your Amazon operations, listings, or automation needs.</p>
+      <p>Let's talk about the app, system, or automation your team needs, or how I can help with Amazon listings and operations.</p>
       <div class="cta-actions">
         <a href="assets/Nelvin-Amonsot-Resume.pdf" class="btn btn-primary" download>Download Resume</a>
         <a href="contact.html" class="btn btn-ghost">Contact Me</a>
@@ -258,7 +296,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="wordmark">Nelvin<span style="color:var(--cyan)">.</span>Amonsot</div>
-        <p>Operations Manager, Amazon SEO Specialist, and Automation Builder helping businesses run smoother and sell more.</p>
+        <p>App &amp; System Developer building AI-powered tools, document systems, and dashboards, backed by real Amazon and operations experience.</p>
       </div>
       <div class="footer">
         <h4>Site</h4>
@@ -282,7 +320,7 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 Nelvin Amonsot. All rights reserved.</span>
-      <span>Built for remote Operations, Amazon SEO &amp; Automation roles.</span>
+      <span>Open to remote App/System Development, Automation &amp; Operations roles.</span>
     </div>
   </div>
 </footer>

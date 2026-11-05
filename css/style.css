@@ -595,3 +595,11 @@ footer {
   section { padding: 60px 0; }
   .stats-strip { grid-template-columns: 1fr 1fr; padding: 28px; }
 }
+
+@media (max-width: 480px) {
+  .nav-inner { padding: 14px 16px; }
+  .nav-cta { gap: 10px; }
+  .nav-cta .btn-outline { display: none; }
+  .recognition, .cta-banner { padding: 28px 20px; }
+  .recognition > * { min-width: 0; }
+}

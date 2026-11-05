@@ -2,6 +2,11 @@
 
 Status: **✅ FINALIZED — ready to build.** This document is the single source of truth we'll build from.
 
+> **Update (Nov 2026): repositioned as App & System Developer.** The site now leads with app/system development
+> (SK Records and Finance System, AI Receiving Digitizer, Flat File app, 69 dashboards, Gabay-Tesis), with
+> Amazon product listing/SEO and operations management kept as supporting strengths. Resume and full CV were
+> rewritten to match. Sections below are the original spec and are kept for history.
+
 ---
 
 ## 1. Project Overview
